@@ -102,6 +102,9 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)-kernel/vendor-modules/*.ko)
 endif
 
+# MediaTek
+BOARD_HAS_MTK_HARDWARE := true
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
