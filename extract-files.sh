@@ -44,6 +44,8 @@ function blob_fixup {
 	vendor/etc/init/init.batterysecret.rc | vendor/etc/init/mi_ic.rc | vendor/etc/init/hw/init.mi_thermald.rc | vendor/etc/init/init.charge_logger.rc | vendor/etc/init/mi_ric.rc)
             sed -i '/seclabel/d' "${2}"
             ;;
+    vendor/lib64/libwifi-hal-mtk.so)
+        "$PATCHELF" --set-soname libwifi-hal-mtk.so "$2"
     esac
 }
 
