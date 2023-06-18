@@ -1,9 +1,9 @@
 
-Device Tree for Poco F3 GT (ares)
+Device Tree for Xiaomi 11T (agate)
 ==========================================
 
-The Poco F3 GT (codenamed _"ares"_) is a high-end smartphone from Xiaomi.
-It was released in July 2021.
+The Xiaomi 11T (codenamed _"agate"_) is a high-end smartphone from Xiaomi.
+It was released in 2021.
 
 | Basic                   | Spec Sheet                                                                                                                     |
 | -----------------------:|:------------------------------------------------------------------------------------------------------------------------------ |
@@ -19,4 +19,4 @@ It was released in July 2021.
 | Camera (Front)          | 16 MP                                                                                                                          |
 
 ## Device picture
-![ares](https://www.91-img.com/gallery_images_uploads/5/4/5455bdfbb10e045ef843a853969dc514df389e3e.jpg)
+![agate](https://images.frandroid.com/wp-content/uploads/2021/09/xiaomi-11t-frandroid-2021-1.png)
