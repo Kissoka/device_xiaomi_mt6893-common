@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=ares
+DEVICE=agate
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

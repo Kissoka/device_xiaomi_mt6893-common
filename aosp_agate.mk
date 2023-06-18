@@ -21,27 +21,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from ares device makefile
-$(call inherit-product, device/xiaomi/ares/device.mk)
+$(call inherit-product, device/xiaomi/agate/device.mk)
 
 # Inherit some source stuff
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/aosp/common_full_phone.mk)
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ares
-PRODUCT_NAME := aosp_ares
-PRODUCT_BRAND := POCO
-PRODUCT_MODEL := POCO F3 GT
+PRODUCT_DEVICE := agate
+PRODUCT_NAME := aosp_agate
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := mt6893
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=ares \
-    PRODUCT_NAME=ares \
-    PRIVATE_BUILD_DESC="ares-user 11 RP1A.200720.011 V12.5.5.0.RKJINXM release-keys"
+    PRODUCT_DEVICE=agate \
+    PRODUCT_NAME=agate \
+    PRIVATE_BUILD_DESC="agate-user-11-RP1A.200720.011-V12.5.9.0.RKWMIXM-release-keys
 
-BUILD_FINGERPRINT := POCO/aresin/ares:11/RP1A.200720.011/V12.5.5.0.RKJINXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/agate/agate:11/RP1A.200720.011/V12.5.9.0.RKWMIXM:user/release-keys

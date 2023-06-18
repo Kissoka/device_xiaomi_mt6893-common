@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/ares
+DEVICE_PATH := device/xiaomi/agate
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
@@ -36,20 +36,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure.recovery=0
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-$(call inherit-product, vendor/xiaomi/ares/ares-vendor.mk)
-
 # A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    boot \
-    dtbo \
-    product \
-    system \
-    system_ext \
-    vbmeta \
-    vbmeta_system \
-    vendor \
-    odm
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -298,7 +285,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Tethering
 PRODUCT_PACKAGES += \
-    TetheringConfigOverlayAres \
+    TetheringConfigOverlayAgate \
     android.hardware.tetheroffload.config@1.0.vendor \
     android.hardware.tetheroffload.control@1.0.vendor
 
@@ -321,10 +308,6 @@ PRODUCT_PACKAGES += \
     vndservice \
     vndservicemanager
 
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-ndk_platform.vendor
-
 # VNDK
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-core/libmedia_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmedia_helper-v30.so \
@@ -336,17 +319,15 @@ PRODUCT_COPY_FILES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    WifiOverlayAres \
+    WifiOverlayAgate \
     android.hardware.wifi@1.0-service-lazy \
     android.hardware.wifi.supplicant@1.3.vendor \
     android.hardware.wifi.hostapd@1.2.vendor \
     libkeystore-engine-wifi-hidl:64 \
     libkeystore-wifi-hidl
 
-# XiaomiParts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # MtkInCallService
 PRODUCT_PACKAGES += \
     MtkInCallService
+
+$(call inherit-product, vendor/xiaomi/agate/agate-vendor.mk)

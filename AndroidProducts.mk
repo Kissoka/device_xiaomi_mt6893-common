@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_ares.mk
+    $(LOCAL_DIR)/aosp_agate.mk
