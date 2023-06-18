@@ -189,6 +189,7 @@ PRODUCT_PACKAGES += \
     fstab.emmc \
     fstab.enableswap \
     fstab.mt6893 \
+    fstab.mt6893_ramdisk \
     ueventd.qcom.rc \
 
 PRODUCT_COPY_FILES +=  $(DEVICE_PATH)/rootdir/etc/fstab.mt6893:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/etc/fstab.mt6893
