@@ -24,7 +24,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, device/xiaomi/agate/device.mk)
 
 # Inherit some source stuff
-$(call inherit-product, vendor/aosp/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2340
