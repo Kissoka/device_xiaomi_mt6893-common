@@ -7,13 +7,13 @@
         vendor_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
+        dax_framework_compatibility_matrix.xml
         device_framework_matrix.xml
         vendor_framework_compatibility_matrix.xml
         compatibility_matrix.xml
         wechat_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
-        dax_framework_compatibility_matrix.xml
         vendor_framework_compatibility_matrix.xml
         compatibility_matrix.xml
         compatibility_matrix_vendor.xiaomi.hardware.mfidoca.xml
@@ -381,7 +381,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.mtkradioex</name>
-        <version>2.2</version>
+        <version>2.0</version>
         <interface>
             <name>IMtkRadioEx</name>
             <instance>imsSlot1</instance>
@@ -395,7 +395,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.mtkradioex</name>
-        <version>2.2</version>
+        <version>2.0</version>
         <interface>
             <name>IMtkRadioEx</name>
             <instance>imsSlot1</instance>
@@ -570,6 +570,14 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.microtrust.hardware.soter</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISoter</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.soterservice</name>
         <version>1.0</version>
         <interface>
             <name>ISoter</name>
@@ -773,6 +781,14 @@
         <version>1.0</version>
         <interface>
             <name>ITouchFeature</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true"> 
+        <name>vendor.xiaomi.hardware.citsensorservice</name> 
+        <version>1.1</version>
+        <interface>
+            <name>ICitSensorService</name> 
             <instance>default</instance>
         </interface>
     </hal>
