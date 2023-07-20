@@ -12,6 +12,9 @@ service akmd8963 /system/bin/akmd8963
 
 
 on post-fs
+    # disable HPS
+    write /proc/hps/enabled 0
+
 
     chmod 0660 /dev/spm
     chown system system /dev/spm

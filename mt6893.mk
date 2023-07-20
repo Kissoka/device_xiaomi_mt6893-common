@@ -164,29 +164,31 @@ PRODUCT_BOOT_JARS += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    fstab.mt6893 \
+    factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
     factory_init.rc \
     init.aee.rc \
     init.ago.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
     init.connectivity.rc \
-    init.mi_thermald.rc \
     init.modem.rc \
     init.mt6893.rc \
     init.mt6893.usb.rc \
     init.project.rc \
     init.sensor_2_0.rc \
     init.stnfc.rc \
+    init_conninfra.rc \
+    meta_init.connectivity.common.rc \
     meta_init.connectivity.rc \
     meta_init.modem.rc \
     meta_init.project.rc \
     meta_init.rc \
     multi_init.rc \
-    fstab.emmc \
-    fstab.enableswap \
-    fstab.mt6893 \
-    fstab.mt6893_ramdisk \
-    ueventd.qcom.rc \
+    init.recovery.hardware.rc \
+    init.recovery.mt6893.rc \
 
 PRODUCT_COPY_FILES +=  $(COMMON_PATH)/rootdir/etc/fstab.mt6893:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/etc/fstab.mt6893
 

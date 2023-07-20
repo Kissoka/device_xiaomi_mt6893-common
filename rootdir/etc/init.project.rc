@@ -1,9 +1,9 @@
 # MTK project .rc configure
-import /vendor/etc/init/hw/init.stnfc.rc
-import /system/etc/init/hw/init.stnfc.rc
 import /vendor/etc/init/hw/vendor.mi.secure_element@1.0-service.rc
 import /vendor/etc/init/hw/vendor.mi.secure_element@1.2-service.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
+import /vendor/etc/init/hw/init.stnfc.rc
+import /product/etc/init/hw/init.stnfc.rc
 
 import /vendor/etc/init/init.batterysecret.rc
 import /vendor/etc/init/init.charge_logger.rc
@@ -69,29 +69,6 @@ service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/
     class late_start
     disabled
 
-service displayfeature /system/bin/displayfeature
-    class late_start
-    user root
-    group root
-
-on property:init.svc.surfaceflinger=stopped
-    stop displayfeature
-
-on property:init.svc.surfaceflinger=running
-    start displayfeature
-
-on property:init.svc.surfaceflinger=restarting
-    stop displayfeature
-
-service vendor_tcpdump /vendor/bin/tcpdump -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
-       class main
-       user root
-       group root wifi
-       disabled
-       oneshot
-
-on property:sys.user.0.ce_available=true
-    start vendor_tcpdump
 
 #copy JIIGAN bokeh model
 on property:sys.boot_completed=1
@@ -116,3 +93,21 @@ on property:sys.boot_completed=1
     copy /vendor/etc/camera/jiiganmodel/dof_model/capture_policy /data/vendor/camera/jiiganmodel/dof_model/capture_policy
     chown cameraserver audio  /data/vendor/camera/jiiganmodel/dof_model/capture_policy
     chmod 0777 /data/vendor/camera/jiiganmodel/dof_model/capture_policy
+
+service vendor_tcpdump /vendor/bin/tcpdump -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
+       class main
+       user root
+       group root wifi
+       disabled
+       oneshot
+
+on property:sys.user.0.ce_available=true
+    start vendor_tcpdump
+
+
+service mi_thermald /system/vendor/bin/mi_thermald
+    class main
+    user root
+    group system
+    seclabel u:r:mi_thermald:s0
+
