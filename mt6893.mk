@@ -177,6 +177,7 @@ PRODUCT_PACKAGES += \
     init.mt6893.rc \
     init.mt6893.usb.rc \
     init.project.rc \
+    init.recovery.usb.rc \
     init.sensor_2_0.rc \
     init.stnfc.rc \
     init_conninfra.rc \
