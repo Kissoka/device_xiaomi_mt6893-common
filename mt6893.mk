@@ -163,6 +163,7 @@ PRODUCT_BOOT_JARS += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.mt6893 \
+    fstab.mt6893.ramdisk \
     factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
@@ -187,8 +188,6 @@ PRODUCT_PACKAGES += \
     multi_init.rc \
     init.recovery.hardware.rc \
     init.recovery.mt6893.rc \
-
-PRODUCT_COPY_FILES +=  $(COMMON_PATH)/rootdir/etc/fstab.mt6893:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/etc/fstab.mt6893
 
 # Input
 PRODUCT_COPY_FILES += \
